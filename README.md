@@ -21,6 +21,18 @@
   <a href="https://wbc-ui.com">💎 Pro</a>
 </p>
 
+<p align="center">
+  <img src="./assets/hero-data-table.webp"
+       alt="@wbc-ui/dataviewer2 — interactive data table explorer"
+       width="780"/>
+</p>
+
+<p align="center">
+  <img src="./assets/mermaid-architecture.png"
+       alt="Architecture diagram"
+       width="680"/>
+</p>
+
 ---
 
 ## Why?
@@ -70,7 +82,7 @@ A **Vue 2.7+ component** — `<WBDataViewer>` — that turns any JSON value into
 
 ---
 
-## Teasing Examples
+## Usage Examples
 
 ### Level 1 — Any JSON, instantly
 ```html
@@ -215,20 +227,11 @@ For a longer walkthrough with worked examples, see the documentation hub at [wbd
 
 <details>
 <summary>Mermaid diagram (interactive fallback)</summary>
-<div align="center">
-
-```mermaid
-flowchart TD
-    Src["src URL"] -- fetch --> Resp("API response")
-    Resp -- "project / projectMode" --> Rows
-    Value["value (object / array)"] --> Rows("Normalized rows")
-    Rows --> Pipe{"sort · search · filter · paginate"}
-    Pipe --> Render["WBDataViewer renderers"]
-    Render --> Theme["theme (wbdv-theme-*)"]
-    Theme --> DOM(("Interactive table"))
-```
-
-</div>
+<p align="center">
+  <img src="./assets/mermaid-under-the-hood.png"
+       alt="Component architecture"
+       width="680"/>
+</p>
 </details>
 
 - **One data prop** — `value` (or `src` + `project`) feeds normalized rows; columns are inferred or whitelisted via `columns`
